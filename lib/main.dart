@@ -12,10 +12,31 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Pilem'
-      theme: ThemeData(primarySwatch: const Colors.fromARGB(255, 227, 126, 197)),
-      home: const  HomeScreen(
+      title: 'Film',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomeScreen(
+
       ),
-      ),
+    );
+  }
+}
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State MainScreen> createState() =>  MainScreenState();
+}
+
+class  MainScreen extends State MainScreen> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _screens = [
+    const HomeScreen(),
+    const SearchScreen(),
+    const FavoriteScreen()
+  ]
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
